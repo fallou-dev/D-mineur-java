@@ -42,11 +42,11 @@ public class Apropos extends JDialog implements ActionListener {
     titre.setText("DEMINEUR");
     moi.setForeground(Color.orange);
     moi.setPreferredSize(new Dimension(190, 17));
-    moi.setText("par Florent BONDOUX");
+    moi.setText("par Fallou, Prenam et Haby");
     email.setFont(new java.awt.Font("Dialog", 0, 12));
     email.setForeground(Color.orange);
     email.setPreferredSize(new Dimension(190, 17));
-    email.setText("http://dobeliou.free.fr/");
+    email.setText("M1GLSI et M1SRT");
     panel.setBackground(SystemColor.activeCaption);
     fermer.setFont(new java.awt.Font("Dialog", 0, 10));
     fermer.setFocusPainted(false);

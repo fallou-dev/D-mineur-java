@@ -6,7 +6,7 @@ public static VolatileImage drapeau, question, questionSel, mine, boum,
   public static VolatileImage[] chiffre = new VolatileImage[9];
   private Color[] couleurs = new Color[8];
 
-  public static Color dessus = new Color(214, 208, 200); //couleur du "dessus" des cases
+  public static Color dessus = new Color(51,153,255); //couleur du "dessus" des cases
 
   public Graphisme(GraphicsConfiguration gr) {
     //Les couleurs des chiffres
@@ -97,7 +97,7 @@ public static VolatileImage drapeau, question, questionSel, mine, boum,
     g.drawLine(0, 0, 0, 15);
     g.drawLine(0, 0, 15, 0);
     g.setFont(new java.awt.Font("Dialog", 1, 13));
-    g.setColor(Color.blue);
+    g.setColor(Color.white);
     g.drawString("?", 4, 13);
     g.dispose();
 
@@ -113,7 +113,7 @@ public static VolatileImage drapeau, question, questionSel, mine, boum,
     g.drawLine(0, 0, 0, 15);
     g.drawLine(0, 0, 15, 0);
     g.setFont(new java.awt.Font("Dialog", 1, 12));
-    g.setColor(Color.blue);
+    g.setColor(Color.white);
     g.drawString("?", 5, 12);
     g.dispose();
 

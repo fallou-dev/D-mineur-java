@@ -10,7 +10,7 @@ public class Demineur
 
     extends JFrame
     implements MouseListener, WindowListener, ActionListener {
-      private static final long serialVersionUID = 7526472295622776147L;
+  private static final long serialVersionUID = 7526472295622776147L;
   private JPanel panneauHaut = new JPanel();
   private JPanel panneauJeux = new JPanel();
   private GridBagLayout layoutPanneauJeux = new GridBagLayout();
@@ -24,7 +24,7 @@ public class Demineur
   private JMenu help = new JMenu("?");
   private JMenuItem menuNouveau = new JMenuItem("Nouveau");
   JCheckBoxMenuItem menuDebutant = new JCheckBoxMenuItem("Débutant");
-  JCheckBoxMenuItem menuIntermediaire = new JCheckBoxMenuItem( "Moyen");
+  JCheckBoxMenuItem menuIntermediaire = new JCheckBoxMenuItem( "Intermediaire");
   JCheckBoxMenuItem menuExpert = new JCheckBoxMenuItem("Expert");
   JCheckBoxMenuItem menuPerso = new JCheckBoxMenuItem("Personnaliser");
   private JMenuItem apropos = new JMenuItem("A propos");
@@ -518,6 +518,8 @@ public class Demineur
     else if ( (jeux[y][x].getEtat() == 0 || jeux[y][x].getEtat() == 3) &&
              jeux[y][x].isMine()) {
       temps.cancel(); //fin du timer
+
+
       jeux[y][x].setEtat(4); //boum
       boutonNouveau.setIcon(boum);
       for (int i = 0; i < HAUTEUR; i++) {
@@ -531,6 +533,10 @@ public class Demineur
             jeux[i][j].setEtat(5); //on l' affiche
         }
       }
+      JOptionPane.showMessageDialog(null,
+                    "Rejouez", "VOUS AVEZ PERDU",
+                    JOptionPane.INFORMATION_MESSAGE);
+                    menuNouveau.doClick();
       //on affiche les erreurs
       for (int i = 0; i < HAUTEUR; i++) {
         for (int j = 0; j < LARGEUR; j++) {
@@ -622,7 +628,7 @@ public class Demineur
       this.dispose(); // on détruit la fenetre
       System.gc();
       if (TYPE == 1) menuDebutant.setSelected(true);
-      Demineur demineur = new Demineur(8, 8, 10, 1); //et on en refait une
+      Demineur demineur = new Demineur(9, 9, 10, 1); //et on en refait une
     }
     else if (e.getSource() == menuDebutant && !menuDebutant.isSelected())
       menuDebutant.setSelected(true);

@@ -30,7 +30,7 @@ public class Segment extends JPanel {
     {true, true, true, false, true, true, true}//9
   };
   private int valeur;
-  final private Color AFFICHE = new Color(255,0,0);//couleur d'un segment allumé
+  final private Color AFFICHE = new Color(0,255,51);//couleur d'un segment allumé
   final private Color CACHE = new Color(80,0,0);//couleur d'un segment éteint
   private Border border1;
 
